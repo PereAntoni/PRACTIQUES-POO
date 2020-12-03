@@ -1,0 +1,62 @@
+<h1>Desenvolupam un problema orientat a objectes</h1>
+<h2>Classes</h2>
+<script>
+
+
+
+class Animal{
+    constructor(){
+        this.pes=1;
+        this.posicio=0;
+    }
+    camina(i){
+        this.posicio=this.posicio + i;
+        console.log("L'animal ha caminat " + i + " pases. Ara és a la posició " + this.getPosicio());
+        return this.posicio;
+    }
+    menja(i){
+        this.posicio=this.posicio + i;
+        console.log("L'animal ha menjat " + i + " grams. Ara pesa " + this.getPes());
+        return this.posicio;
+    }
+
+    getPosicio(){
+        return this.posicio;
+    }
+
+    getPes(){
+        return this.pes;
+    }
+
+    saluda(){ 
+        console.log("Animal saluda: " + this.so());
+        return this.so();
+    }
+
+    so(){
+        return "cruix";
+    }
+}
+
+class Cocodril extends Animal{
+    so(){return "som un cocodril";}
+}
+
+class Moix extends Animal{
+    so(){return "som un moix";}
+}
+
+
+var a = new Animal();
+var b = new Cocodril();
+var c = new creador(Cocodril);
+
+a.saluda();
+b.saluda();
+c.saluda();
+
+function creador(a){
+    return new a;
+}
+
+</script>
